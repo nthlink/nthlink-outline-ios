@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qye-P3-QKB">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="acH-jG-2IB">
+            <objects>
+                <tableViewController id="pwf-Uw-rqL" customClass="HomeController" customModule="teonvpn_ios_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Jxv-sU-070">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="gdU-LS-HPP">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="D5N-Iq-FIw">
+                                        <rect key="frame" x="20" y="18" width="353" height="41.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D5N-Iq-FIw" id="gDH-sQ-Iez">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="41.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmZ-hV-CJ0">
+                                                    <rect key="frame" x="20" y="10.333333333333336" width="49" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtN-W2-LLr">
+                                                    <rect key="frame" x="77" y="4" width="263" height="33.666666666666664"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Disconnecting"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Disconnecting">
+                                                        <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="toggleVpn:" destination="pwf-Uw-rqL" eventType="touchUpInside" id="L6J-AN-FbR"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HtN-W2-LLr" firstAttribute="leading" secondItem="MmZ-hV-CJ0" secondAttribute="trailing" constant="8" symbolic="YES" id="2UP-Pb-t8a"/>
+                                                <constraint firstItem="MmZ-hV-CJ0" firstAttribute="centerY" secondItem="gDH-sQ-Iez" secondAttribute="centerY" id="LfA-yX-9B8"/>
+                                                <constraint firstItem="HtN-W2-LLr" firstAttribute="centerY" secondItem="MmZ-hV-CJ0" secondAttribute="centerY" id="Owe-TU-k6L"/>
+                                                <constraint firstItem="MmZ-hV-CJ0" firstAttribute="leading" secondItem="gDH-sQ-Iez" secondAttribute="leading" constant="20" symbolic="YES" id="dNK-NI-Kzw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HtN-W2-LLr" secondAttribute="trailing" constant="-7" id="x0S-Z8-XjS"/>
+                                                <constraint firstItem="HtN-W2-LLr" firstAttribute="top" secondItem="gDH-sQ-Iez" secondAttribute="topMargin" constant="-7" id="zLv-ob-jlj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="pwf-Uw-rqL" id="XeE-rc-eRJ"/>
+                            <outlet property="delegate" destination="pwf-Uw-rqL" id="StP-cL-Vsp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="wbe-og-psr"/>
+                    <connections>
+                        <outlet property="vpnToggleBtn" destination="HtN-W2-LLr" id="CZp-Jh-fiu"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ms1-b0-Pyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194.6564885496183" y="-35.211267605633807"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VZE-RK-Tzm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qye-P3-QKB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tke-EA-F8x">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pwf-Uw-rqL" kind="relationship" relationship="rootViewController" id="tGZ-nz-UAX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLD-W2-ROk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-732.06106870229007" y="-35.211267605633807"/>
+        </scene>
+    </scenes>
+</document>
